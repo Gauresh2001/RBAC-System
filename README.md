@@ -1,68 +1,97 @@
-# 🔐 RBAC System - Spring Boot + ReactJS + MySQL + JWT
+# 🔐 RBAC System
+### Role-Based Access Control System using Spring Boot, ReactJS, MySQL & JWT Authentication
 
-A Full Stack **Role-Based Access Control (RBAC)** System built using **Spring Boot**, **ReactJS**, **MySQL**, **Spring Security**, and **JWT Authentication**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java"/>
+  <img src="https://img.shields.io/badge/SpringBoot-4.0-green?style=for-the-badge&logo=springboot"/>
+  <img src="https://img.shields.io/badge/ReactJS-Frontend-blue?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql"/>
+  <img src="https://img.shields.io/badge/JWT-Authentication-red?style=for-the-badge"/>
+</p>
 
-This project provides secure authentication and authorization with **Users, Roles, Permissions**, protected REST APIs, and a modern admin dashboard UI.
+---
+
+# 📌 Project Overview
+
+RBAC System is a **Full Stack Secure Authentication & Authorization Application** developed using **Spring Boot**, **ReactJS**, **Spring Security**, **JWT**, and **MySQL**.
+
+The system provides secure access management using:
+
+✅ Users  
+✅ Roles  
+✅ Permissions  
+✅ JWT Authentication  
+✅ Protected APIs  
+✅ Admin Dashboard  
+
+This project follows a clean **Layered Architecture** with proper security and validation.
 
 ---
 
 # 🚀 Features
 
-## 🔑 Authentication & Security
-- JWT Authentication
+## 🔐 Authentication & Authorization
+- JWT Token Authentication
 - Secure Login & Registration
-- Spring Security Integration
-- Protected APIs
 - Role-Based Authorization
-
-## 👥 User Management
-- Create Users
-- View Users
-- Delete Users
-- Assign Roles
-
-## 🛡️ Role Management
-- Create Roles
-- Assign Permissions
-- View Roles
-- Delete Roles
-
-## 🔐 Permission Management
-- Create Permissions
-- View Permissions
-- Delete Permissions
-
-## 🎨 Frontend Features
-- Modern Responsive UI
-- Dashboard Cards
-- Sidebar Navigation
-- Protected Routes
-- Token-based Authentication
+- Protected REST APIs
+- BCrypt Password Encryption
 
 ---
 
-# 🛠️ Tech Stack
+## 👥 User Management
+- Register Users
+- Login Users
+- View All Users
+- Delete Users
+- Assign Multiple Roles
 
-## Backend
-- Java 17
-- Spring Boot 4
-- Spring Security
-- Spring Data JPA
-- JWT Authentication
-- MySQL
-- Maven
+---
 
-## Frontend
-- ReactJS
-- React Router DOM
-- Axios
-- CSS3
+## 🛡️ Role Management
+- Create Roles
+- Delete Roles
+- Assign Permissions
+- Manage Access Levels
+
+---
+
+## 🔑 Permission Management
+- Create Permissions
+- Delete Permissions
+- View Permissions
+
+---
+
+## 🎨 Frontend Features
+- Responsive Modern UI
+- Dashboard Analytics Cards
+- Sidebar Navigation
+- Protected Routes
+- Axios API Integration
+- Clean User Experience
+
+---
+
+# 🏗️ Tech Stack
+
+| Technology | Usage |
+|------------|------|
+| Java 17 | Backend Language |
+| Spring Boot 4 | Backend Framework |
+| Spring Security | Authentication & Authorization |
+| JWT | Secure Token Authentication |
+| ReactJS | Frontend Framework |
+| MySQL | Database |
+| Hibernate / JPA | ORM |
+| Axios | API Integration |
+| Maven | Dependency Management |
 
 ---
 
 # 📂 Project Structure
 
-## Backend Structure
+## 🔹 Backend Structure
 
 ```bash
 src/main/java/com/rbac
@@ -79,7 +108,7 @@ src/main/java/com/rbac
 
 ---
 
-## Frontend Structure
+## 🔹 Frontend Structure
 
 ```bash
 src
@@ -112,9 +141,7 @@ cd rbac-system
 
 ---
 
-## 3️⃣ Configure MySQL
-
-Create Database:
+## 3️⃣ Create Database
 
 ```sql
 CREATE DATABASE rbac_db;
@@ -122,7 +149,7 @@ CREATE DATABASE rbac_db;
 
 ---
 
-## 4️⃣ Configure `application.properties`
+## 4️⃣ Configure application.properties
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/rbac_db
@@ -142,12 +169,6 @@ jwt.expiration=86400000
 ```bash
 mvn clean install
 mvn spring-boot:run
-```
-
-Backend Runs On:
-
-```bash
-http://localhost:8080
 ```
 
 ---
@@ -170,21 +191,24 @@ npm install
 
 ---
 
-## 3️⃣ Run Frontend
+## 3️⃣ Start Frontend
 
 ```bash
 npm start
 ```
 
-Frontend Runs On:
+---
 
-```bash
-http://localhost:3000
-```
+# 🌐 Application URLs
+
+| Application | URL |
+|------------|-----|
+| Frontend | http://localhost:3000 |
+| Backend | http://localhost:8080 |
 
 ---
 
-# 🔗 API Endpoints
+# 🔗 REST API Endpoints
 
 ## 🔐 Authentication APIs
 
@@ -215,7 +239,7 @@ http://localhost:3000
 
 ---
 
-## 🔐 Permission APIs
+## 🔑 Permission APIs
 
 | Method | Endpoint | Description |
 |-------|-----------|-------------|
@@ -225,7 +249,7 @@ http://localhost:3000
 
 ---
 
-# 🔑 JWT Authentication
+# 🔐 JWT Authentication
 
 After successful login:
 
@@ -236,7 +260,7 @@ After successful login:
 }
 ```
 
-Use token in headers:
+Use Token in Header:
 
 ```bash
 Authorization: Bearer YOUR_TOKEN
@@ -244,88 +268,56 @@ Authorization: Bearer YOUR_TOKEN
 
 ---
 
-# 📸 Screenshots
-
-## 🔐 Login Page
-- Secure JWT Login
-- Responsive Design
-
-## 📋 Dashboard
-- Modern Admin Dashboard
-- Quick Navigation Cards
-
-## 👥 Users Page
-- Manage Users
-- Delete Users
-- View Roles
-
-## 🛡️ Roles Page
-- Create Roles
-- Assign Permissions
-
-## 🔐 Permissions Page
-- Create Permissions
-- Delete Permissions
-
----
-
-# 🧪 Postman Testing
-
-Test all APIs using Postman.
-
-### Example Login API
-
-```http
-POST http://localhost:8080/api/auth/login
-```
-
-### Request Body
-
-```json
-{
-  "email": "gauresh@gmail.com",
-  "password": "12345"
-}
-```
-
----
-
 # 🗄️ Database Tables
 
-- users
-- role
-- permission
-- user_roles
-- role_permissions
+```text
+users
+role
+permission
+user_roles
+role_permissions
+```
 
 ---
 
 # 🔥 Security Features
 
-- JWT Token Authentication
-- Password Encryption using BCrypt
-- Role-Based Authorization
-- Protected APIs
-- Stateless Session Management
+✅ JWT Authentication  
+✅ BCrypt Password Encryption  
+✅ Role-Based Access Control  
+✅ Protected APIs  
+✅ Stateless Authentication  
+✅ Spring Security Integration  
 
 ---
 
-# 📌 Future Enhancements
+# 📸 UI Screens
+
+✅ Login Page  
+✅ Register Page  
+✅ Dashboard  
+✅ Users Management  
+✅ Roles Management  
+✅ Permissions Management  
+
+---
+
+# 📈 Future Enhancements
 
 - Update APIs
 - Search & Pagination
-- Email Verification
 - Forgot Password
-- Docker Support
-- Deployment
+- Email Verification
+- Docker Deployment
+- Cloud Deployment
+- Swagger Documentation
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Developed By
 
 ## Gauresh Badgujar
-
-Full Stack Java Developer
+### Full Stack Java Developer
 
 ---
 
@@ -333,12 +325,12 @@ Full Stack Java Developer
 
 If you like this project:
 
-⭐ Star the repository  
-🍴 Fork the repository  
-📩 Share with others
+⭐ Star the Repository  
+🍴 Fork the Repository  
+📩 Share with Others  
 
 ---
 
-# 📄 License
+# 📜 License
 
-This project is developed for learning and educational purposes.
+This project is developed for educational and learning purposes.
